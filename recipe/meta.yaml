@@ -1,13 +1,13 @@
 {% set name = "oschmod" %}
-{% set version = "0.3.12" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/oschmod-{{ version }}.tar.gz
-  sha256: bec99216f31615ee653b2a5c87cacfb4e4b6184c0e9f71da186300dacae974f3
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/oschmod-{{ version }}.tar.gz
+  sha256: 196cd717f97cb17aa9964b0640c535e51df36a21bb574db7964a052dba58e15d
 
 build:
   noarch: python
@@ -15,7 +15,7 @@ build:
     - oschmod = oschmod.cli:main
     - ochmod = oschmod.cli:main
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
